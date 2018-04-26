@@ -1,0 +1,83 @@
+$primary-color: #be0000;
+$secondary-color: #606060;
+$tertiary-color: coral;
+$red: red;
+$green: green;
+$white: white;
+
+span{
+  &.red{
+    color: $red;
+  }
+  &.green{
+    color: $green;
+  }
+}
+body{
+  background-color: $primary-color;
+}
+.main-container{
+  width: 80%;
+  min-height: 90vh;
+  margin: 0 auto;
+  background-color: $secondary-color;
+  padding-top: 15px;
+}
+.bar-container{
+  width: 90%;
+  height: 50px;
+  margin: 10px 5%;
+  border: solid $primary-color 5px;
+  overflow-x: hidden;
+
+  &.with-triangle{
+    position: relative;
+    top: -70px;
+  }
+}
+.middle-indicator{
+  width: 0; 
+  height: 0; 
+  border-left: 25px solid transparent; 
+  border-right: 25px solid transparent;
+  margin: 0 calc(50% - 25px);
+  z-index:2;
+
+  &.top{
+    border-top: 25px solid $primary-color;
+  }
+
+  &.bottom{
+    border-bottom: 25px solid $primary-color;
+    top:40px;
+  }
+}
+.moving-block{
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  background-color: $tertiary-color;
+  left: -50px;
+  animation: move 2s linear infinite;
+  animation-play-state:paused;
+}
+@keyframes move {
+    0%   {left:-50px;}
+    100% {left: 100%;}
+} 
+.result-container{
+   width: 90%;
+   margin: 10px 5%;
+   height: 100px;
+   max-height: 200px;
+   overflow:auto;
+   border: solid $primary-color 5px;
+   background-color: $white;
+}
+.cycles-container{
+  border: solid $primary-color 5px;
+  margin: 10px 5%;
+  height: 25px;
+  width: 25px;
+}
