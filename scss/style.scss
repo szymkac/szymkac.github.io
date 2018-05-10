@@ -1,9 +1,9 @@
-$primary-color: #be0000;
-$secondary-color: #606060;
+$primary-color: #830303;
+$secondary-color: #e4cfc5;
 $tertiary-color: coral;
 $red: red;
 $green: green;
-$white: white;
+$white: #d1cece;
 
 span{
   &.red{
@@ -13,15 +13,23 @@ span{
     color: $green;
   }
 }
+h1, h2, h3, h4, h5, h6{
+  text-align: center;
+  color: $primary-color;
+}
 body{
   background-color: $primary-color;
+  font-family: Garamond;
+  margin: 0 auto;
 }
 .main-container{
   width: 80%;
   min-height: 90vh;
   margin: 0 auto;
   background-color: $secondary-color;
-  padding-top: 15px;
+  border: solid $secondary-color 1px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
 }
 .bar-container{
   width: 90%;
@@ -29,10 +37,12 @@ body{
   margin: 10px 5%;
   border: solid $primary-color 5px;
   overflow-x: hidden;
+  background-color: $white;
 
   &.with-triangle{
     position: relative;
     top: -70px;
+    background-color: transparent;
   }
 }
 .middle-indicator{
@@ -77,6 +87,7 @@ body{
 }
 .cycles-container{
   border: solid $primary-color 5px;
+  background-color: $white;
   margin: 10px 5%;
   height: 25px;
   width: 25px;

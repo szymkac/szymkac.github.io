@@ -4,25 +4,35 @@ span.red {
 span.green {
   color: green; }
 
+h1, h2, h3, h4, h5, h6 {
+  text-align: center;
+  color: #830303; }
+
 body {
-  background-color: #be0000; }
+  background-color: #830303;
+  font-family: Garamond;
+  margin: 0 auto; }
 
 .main-container {
   width: 80%;
   min-height: 90vh;
   margin: 0 auto;
-  background-color: #606060;
-  padding-top: 15px; }
+  background-color: #e4cfc5;
+  border: solid #e4cfc5 1px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px; }
 
 .bar-container {
   width: 90%;
   height: 50px;
   margin: 10px 5%;
-  border: solid #be0000 5px;
-  overflow-x: hidden; }
+  border: solid #830303 5px;
+  overflow-x: hidden;
+  background-color: #d1cece; }
   .bar-container.with-triangle {
     position: relative;
-    top: -70px; }
+    top: -70px;
+    background-color: transparent; }
 
 .middle-indicator {
   width: 0;
@@ -32,9 +42,9 @@ body {
   margin: 0 calc(50% - 25px);
   z-index: 2; }
   .middle-indicator.top {
-    border-top: 25px solid #be0000; }
+    border-top: 25px solid #830303; }
   .middle-indicator.bottom {
-    border-bottom: 25px solid #be0000;
+    border-bottom: 25px solid #830303;
     top: 40px; }
 
 .moving-block {
@@ -59,11 +69,12 @@ body {
   height: 100px;
   max-height: 200px;
   overflow: auto;
-  border: solid #be0000 5px;
-  background-color: white; }
+  border: solid #830303 5px;
+  background-color: #d1cece; }
 
 .cycles-container {
-  border: solid #be0000 5px;
+  border: solid #830303 5px;
+  background-color: #d1cece;
   margin: 10px 5%;
   height: 25px;
   width: 25px; }
