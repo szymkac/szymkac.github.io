@@ -1,9 +1,3 @@
-span.red {
-  color: red; }
-
-span.green {
-  color: green; }
-
 h1, h2, h3, h4, h5, h6 {
   text-align: center;
   color: #830303; }
@@ -25,13 +19,14 @@ body {
 .bar-container {
   width: 90%;
   height: 50px;
-  margin: 10px 5%;
+  margin: 100px 5% 0 5%;
   border: solid #830303 5px;
   overflow-x: hidden;
   background-color: #d1cece; }
   .bar-container.with-triangle {
     position: relative;
-    top: -70px;
+    margin-top: 0;
+    top: -60px;
     background-color: transparent; }
 
 .middle-indicator {
@@ -62,19 +57,3 @@ body {
     left: -50px; }
   100% {
     left: 100%; } }
-
-.result-container {
-  width: 90%;
-  margin: 10px 5%;
-  height: 100px;
-  max-height: 200px;
-  overflow: auto;
-  border: solid #830303 5px;
-  background-color: #d1cece; }
-
-.cycles-container {
-  border: solid #830303 5px;
-  background-color: #d1cece;
-  margin: 10px 5%;
-  height: 25px;
-  width: 25px; }

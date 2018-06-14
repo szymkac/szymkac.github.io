@@ -1,18 +1,8 @@
 $primary-color: #830303;
 $secondary-color: #e4cfc5;
 $tertiary-color: coral;
-$red: red;
-$green: green;
 $white: #d1cece;
 
-span{
-  &.red{
-    color: $red;
-  }
-  &.green{
-    color: $green;
-  }
-}
 h1, h2, h3, h4, h5, h6{
   text-align: center;
   color: $primary-color;
@@ -34,14 +24,15 @@ body{
 .bar-container{
   width: 90%;
   height: 50px;
-  margin: 10px 5%;
+  margin: 100px 5% 0 5%;
   border: solid $primary-color 5px;
   overflow-x: hidden;
   background-color: $white;
 
   &.with-triangle{
     position: relative;
-    top: -70px;
+    margin-top:0;
+    top: -60px;
     background-color: transparent;
   }
 }
@@ -76,19 +67,3 @@ body{
     0%   {left:-50px;}
     100% {left: 100%;}
 } 
-.result-container{
-   width: 90%;
-   margin: 10px 5%;
-   height: 100px;
-   max-height: 200px;
-   overflow:auto;
-   border: solid $primary-color 5px;
-   background-color: $white;
-}
-.cycles-container{
-  border: solid $primary-color 5px;
-  background-color: $white;
-  margin: 10px 5%;
-  height: 25px;
-  width: 25px;
-}
