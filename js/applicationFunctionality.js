@@ -89,7 +89,7 @@ function audioStart(numberOfAudio) {
             audioPath = 'content/audio1.mp3';
             break;
         case 2:
-            audioPath = 'content/audio1.mp3';
+            audioPath = 'content/audio2.mp3';
             break;
     }
     if (audioPath) {
