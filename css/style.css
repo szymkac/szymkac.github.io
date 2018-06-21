@@ -14,7 +14,8 @@ body {
   background-color: #e4cfc5;
   border: solid #e4cfc5 1px;
   border-bottom-left-radius: 50px;
-  border-bottom-right-radius: 50px; }
+  border-bottom-right-radius: 50px;
+  position: relative; }
 
 .bar-container {
   width: 90%;
@@ -57,3 +58,7 @@ body {
     left: -50px; }
   100% {
     left: 100%; } }
+
+.instruction-container {
+  position: absolute;
+  bottom: 0; }

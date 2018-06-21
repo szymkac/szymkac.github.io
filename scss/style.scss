@@ -20,6 +20,7 @@ body{
   border: solid $secondary-color 1px;
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
+  position: relative;
 }
 .bar-container{
   width: 90%;
@@ -67,3 +68,7 @@ body{
     0%   {left:-50px;}
     100% {left: 100%;}
 } 
+.instruction-container{
+  position: absolute;
+  bottom: 0;
+}

@@ -28,7 +28,7 @@ $(document).keypress(function (event) {
                     gameState = "GAME";
                     $('#message-container').html("Naciśnij spację, kiedy wskaźnik znajdzie się na środku paska.")
                     audioStart(actualGameStage);
-                    countTo(3);
+                    countTo(30);
                     break;
                 case "GAME":
                     gameCycle();
@@ -74,6 +74,7 @@ function animIteration() {
         else {
             $('#message-container').html("Koniec badania.")
             $('#counter-container').empty();
+            saveResult();
         }
         if (actualGameStage > 1)
             audioStop();
@@ -118,4 +119,26 @@ function countTo(max) {
             }
         }, 1000);
     })();
+}
+
+function saveResult() {
+    var filename = "Results.txt";
+    var textBlob = "";
+    var keys = Object.keys(results);
+    keys.forEach(function (key) {
+        textBlob += results[key] + " ; ";
+    }.bind(this))
+
+    var blob = new Blob([textBlob], { type: 'text/txt' });
+    var saveBlob = window.navigator.msSaveBlob;
+    if (saveBlob)
+        saveBlob(blob, filename);
+    else {
+        var a = window.document.createElement("a");
+        a.href = window.URL.createObjectURL(blob);
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+    }
 }
